@@ -4,12 +4,6 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 require './config/environment'
 
-# APPLICATION_ROOT = File.expand_path('..', __FILE__)
-
-
-# task :environment do
-#   require File.expand_path(File.join(*%w[ config environment ]), File.dirname(__FILE__))
-# end
 
 # task :default => :spec
 Dir["#{Gem::Specification.find_by_name('integration').full_gem_path}/lib/tasks/*.rake"].each { |ext| load ext } if defined?(Rake)
