@@ -1,6 +1,7 @@
 require 'net/http'
 namespace :dashboard do
   SCORE_PATH = 'http://dashboard.helabs.com.br/scores'
+  STATS_DIRECTORIES = []
   
   def send_scores raw_data 
     uri = URI(SCORE_PATH)
@@ -10,6 +11,7 @@ namespace :dashboard do
 
   desc "Send scores to Dashboard"
   task :send_scores => "setup_stat" do
+    binding.pry
     @raw_data = CodeStatisticsScore.new(*STATS_DIRECTORIES).to_s
     send_scores @raw_data
   end
