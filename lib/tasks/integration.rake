@@ -6,6 +6,10 @@ namespace :integration do
   DEV_EMAIL = 'rafael.fiuza@helabs.com.br'
   HASHED_CODE = '4082c7ba48cc9f1327633723bf6743eb'
   TOKEN = 'iG7ttEDxmD6URq9IgFSBJw'
+
+  def project_name
+    File.expand_path(settings.root.gsub('/config','')).split("/").last
+  end
   
   namespace :heroku do
     task :add_remote do

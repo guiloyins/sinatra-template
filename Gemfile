@@ -5,7 +5,6 @@ group :development do
   gem 'foreman',            '0.60.2'
   gem 'heroku',             '2.28.12'
   gem 'integration', :git => 'git://github.com/mergulhao/integration.git'
-  # gem 'alltasks', :git => 'git://github.com/ricaurte/alltasks.git'
 end
 
 group :test do

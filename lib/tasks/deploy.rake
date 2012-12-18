@@ -1,5 +1,5 @@
 namespace :heroku do
-  APP = 'dashboard-projects'
+  APP = 'atendesimples-ws'
 
   def run(*cmd)
     system(*cmd)
